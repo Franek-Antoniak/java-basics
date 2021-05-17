@@ -24,6 +24,7 @@ ul {
   margin: 0;
   background: #ffffff;
   padding: 0;
+  padding-bottom: 0;
 }
 @media (min-width: 36em) {
   ul {
