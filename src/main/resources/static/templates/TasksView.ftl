@@ -22,20 +22,18 @@
           </div>
         </div>
         <#list listOfTasks as task>
-        <div class="id border border-primary+">
+        <div class="border-primary+">
         <ul>
           <li>
             <input type="checkbox" id="cb${task?index}" name="cb${task?index}" <#if task.done>checked<#else>unchecked</#if> onclick="changeState('cb${task?index}', 'uuid${task?index}')">
             <label for="cb${task?index}">
                 <span id="uuid${task?index}" style="display:none">${task.uniqueId}</span>
                 <span id="task${task?index}">Description: ${task.description}</span>
-                <br>
             </label>
           </li>
         </ul>
         </div>
-
-        <br>
+        <button type="button" class="btn btn-danger btn-block">Danger</button>
         </#list>
       </div>
     </body>
