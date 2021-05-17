@@ -11,30 +11,29 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 
-@RequestMapping("/api/task")
-@RestController()
+@RestController
 @RequiredArgsConstructor
 public class TaskController {
 
     private final TaskService taskService;
     private final FreeMarkerService freeMarkerService;
 
-    @PostMapping(value = "/new")
+    @PostMapping(value = "/api/task/new")
     public ResponseEntity<String> addNewTask(@RequestBody TaskCreate taskCreate) {
         return ResponseEntity.ok("{" + "id : \"" + taskService.addNewTask(taskCreate) + "\"}");
     }
 
-    @DeleteMapping(value = "/delete/{uuid}")
+    @DeleteMapping(value = "/api/task/delete/{uuid}")
     public ResponseEntity<UUID> deleteTask(@PathVariable String uuid) {
         return ResponseEntity.ok(taskService.deleteByUniqueId(uuid));
     }
 
-    @PatchMapping(value = "/update")
+    @PatchMapping(value = "/api/task/update")
     public ResponseEntity<UUID> updateStateOfTask(@RequestBody TaskUpdate taskUpdate) {
         return ResponseEntity.ok(taskService.updateDoneOfTaskByUniqueId(taskUpdate));
     }
 
-    @GetMapping("/latest")
+    @GetMapping(value = "/home")
     public ResponseEntity<String> getLatestWeb() {
         return freeMarkerService.getResponseEntityHTML("TasksView.ftl", "listOfTasks", taskService.getLatestTasks());
     }
