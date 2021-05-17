@@ -20,3 +20,18 @@ function changeState(state, uuid) {
     });
 }
 
+function sendTask() {
+    let object = {
+        "description": $("#serviceNowStr").val(),
+    };
+
+    $.ajax({
+        type: "POST",
+        url: "/api/task/new",
+        data: JSON.stringify(object),
+        contentType: 'application/json',
+        error: function(xhr, status, err) {
+            console.error(xhr, status, err.toString());
+        }.bind(this)
+    });
+}

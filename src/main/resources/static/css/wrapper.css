@@ -3,4 +3,5 @@ wrapper {
     grid-template-columns: minmax(1fr, 50px);
     justify-content: center;
     font-size: 12px;
+    display: inline-block;
 }

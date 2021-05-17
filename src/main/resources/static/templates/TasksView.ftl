@@ -11,6 +11,16 @@
 </head>
     <body>
       <div id="wrapper">
+        <div class="form-horizontal">
+          <div class="form-group">
+            <div class="col-xs-10">
+              <textarea class="form-control input-sm" rows="3" placeholder="Write your task here!" style="resize: none" ng-model="formData_EventDetails.serviceNowStr" id="serviceNowStr" maxlength="250"></textarea>
+            </div>
+            <div class="col-xs-2">
+              <button class="btn uk-button btn-block btn-secondary" ng-click="openServiceNowPopup(formData_EventDetails)" onclick="sendTask()"> Add </button>
+            </div>
+          </div>
+        </div>
         <#list listOfTasks as task>
         <div class="id border border-primary+">
         <ul>
@@ -20,7 +30,6 @@
                 <span id="uuid${task?index}" style="display:none">${task.uniqueId}</span>
                 <span id="task${task?index}">Description: ${task.description}</span>
                 <br>
-                </span>
             </label>
           </li>
         </ul>

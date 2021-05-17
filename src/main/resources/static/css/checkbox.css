@@ -84,6 +84,7 @@ label {
   user-select: none;
   border-bottom: 2px solid #ededed;
   cursor: pointer;
+  word-break: break-word;
 }
 label:hover {
   border-bottom-color: #adadad;

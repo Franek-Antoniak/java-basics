@@ -38,3 +38,4 @@ out/
 /h2database/
 /h2database/tasks.trace.db
 /h2database/tasks.mv.db
+/src/
