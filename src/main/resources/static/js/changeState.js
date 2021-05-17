@@ -10,8 +10,8 @@ function changeState(state, uuid) {
     };
 
     $.ajax({
-        type:"PATCH",
-        url:"http://localhost:8080/api/task/update",
+        type: "PATCH",
+        url: "/api/task/update",
         data: JSON.stringify(object),
         contentType: 'application/json',
         error: function(xhr, status, err) {
