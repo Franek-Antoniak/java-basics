@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/checkbox.css">
+    <link rel="stylesheet" href="/css/wrapper.css">
+    <script src="/js/changeState.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <title> Tasks View </title>
+</head>
+    <body>
+      <div id="wrapper">
+        <#list listOfTasks as task>
+        <div class="id border border-primary+">
+        <ul>
+          <li>
+            <input type="checkbox" id="cb${task?index}" name="cb${task?index}" <#if task.done>checked<#else>unchecked</#if> onclick="changeState('cb${task?index}', 'uuid${task?index}')">
+            <label for="cb${task?index}">
+                <span id="uuid${task?index}" style="display:none">${task.uniqueId}</span>
+                <span id="task${task?index}">Description: ${task.description}</span>
+                <br>
+                </span>
+            </label>
+          </li>
+        </ul>
+        </div>
+
+        <br>
+        </#list>
+      </div>
+    </body>
+</html>

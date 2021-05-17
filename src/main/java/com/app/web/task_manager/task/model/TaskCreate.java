@@ -3,7 +3,6 @@ package com.app.web.task_manager.task.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.coyote.http11.filters.SavedRequestInputFilter;
 
 import java.util.UUID;
 

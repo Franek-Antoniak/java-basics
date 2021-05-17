@@ -19,7 +19,7 @@ public class FreeMakerConfigBean {
 
         // Specify the source where the template files come from.
         try {
-            cfg.setDirectoryForTemplateLoading(new ClassPathResource("templates").getFile());
+            cfg.setDirectoryForTemplateLoading(new ClassPathResource("static/templates").getFile());
         } catch (IOException e) {
             e.printStackTrace();
         }
