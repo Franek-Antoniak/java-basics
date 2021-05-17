@@ -30,8 +30,10 @@
                 <span id="uuid${task?index}" style="display:none">${task.uniqueId}</span>
                 <span id="task${task?index}">Description: ${task.description}</span>
             </label>
-            <button type="button" class="btn btn-danger btn-block">Delete</button>
-            <button type="button" class="btn btn-success btn-block">Success</button>
+            <div style="display:flex; justify-content: center;">
+                <button type="button" class="btn btn-success" style="margin-right: 10px">Complete task</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
           </li>
         </ul>
         </div>
