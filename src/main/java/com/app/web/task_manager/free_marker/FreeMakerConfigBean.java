@@ -5,6 +5,7 @@ import freemarker.template.TemplateExceptionHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
 
@@ -19,7 +20,7 @@ public class FreeMakerConfigBean {
 
         // Specify the source where the template files come from.
         try {
-            cfg.setDirectoryForTemplateLoading(new ClassPathResource("resources\\static\\templates").getFile());
+            cfg.setDirectoryForTemplateLoading(new File("src/main/resources/static/templates"));
         } catch (IOException e) {
             e.printStackTrace();
         }
