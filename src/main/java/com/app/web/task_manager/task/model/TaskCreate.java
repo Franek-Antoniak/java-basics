@@ -14,7 +14,6 @@ public class TaskCreate {
     private static final String DEFAULT_DESCRIPTION = "Nothing to do";
 
     private String description = DEFAULT_DESCRIPTION;
-    private boolean deleted = false;
     private UUID uniqueId;
     private boolean done = false;
 

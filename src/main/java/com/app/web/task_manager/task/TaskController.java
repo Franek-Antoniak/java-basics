@@ -2,6 +2,7 @@ package com.app.web.task_manager.task;
 
 import com.app.web.task_manager.free_marker.FreeMarkerService;
 import com.app.web.task_manager.task.model.TaskCreate;
+import com.app.web.task_manager.task.model.TaskDelete;
 import com.app.web.task_manager.task.model.TaskUpdate;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -23,9 +24,9 @@ public class TaskController {
         return ResponseEntity.ok("{" + "id : \"" + taskService.addNewTask(taskCreate) + "\"}");
     }
 
-    @DeleteMapping(value = "/api/task/delete/{uuid}")
-    public ResponseEntity<UUID> deleteTask(@PathVariable String uuid) {
-        return ResponseEntity.ok(taskService.deleteByUniqueId(uuid));
+    @DeleteMapping(value = "/api/task/delete")
+    public ResponseEntity<UUID> deleteTask(@RequestBody TaskDelete taskDelete) {
+        return ResponseEntity.ok(taskService.deleteByUniqueId(taskDelete));
     }
 
     @PatchMapping(value = "/api/task/update")

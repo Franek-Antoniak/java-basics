@@ -1,6 +1,7 @@
 package com.app.web.task_manager.task;
 
 import com.app.web.task_manager.task.model.TaskCreate;
+import com.app.web.task_manager.task.model.TaskDelete;
 import com.app.web.task_manager.task.model.TaskUpdate;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,8 +16,8 @@ public class TaskService {
     private final TaskMapper taskMapper;
     private final TaskRepository taskRepository;
 
-    public UUID deleteByUniqueId(String uniqueId) {
-        UUID uuid = UUID.fromString(uniqueId);
+    public UUID deleteByUniqueId(TaskDelete taskDelete) {
+        UUID uuid = taskDelete.getUniqueId();
 
         Task task = taskRepository.findByUniqueId(uuid).orElseThrow(TaskNotFoundException::new);
 

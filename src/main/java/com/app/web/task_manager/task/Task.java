@@ -13,14 +13,12 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-@Where(clause = "deleted = false")
 public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String description;
-    private boolean deleted = false;
     private UUID uniqueId;
     private boolean done = false;
 
