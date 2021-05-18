@@ -33,8 +33,7 @@
                 <span id="task${task?index}">Description: ${task.description} </span>
             </label>
             <div style="display:flex; justify-content: center;">
-                <button type="button" class="btn btn-success" style="margin-right: 10px">Complete task</button>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter" onclick="createDeleteTaskObject('uuid${task?index}')">Delete</button>
+                <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#exampleModalCenter"  onclick="createDeleteTaskObject('uuid${task?index}')">Delete</button>
             </div>
           </li>
         </ul>
@@ -46,7 +45,7 @@
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">WARNING!</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>

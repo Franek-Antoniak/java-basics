@@ -36,7 +36,7 @@ function sendTask() {
     });
 }
 
-let taskDelete;
+var  taskDelete;
 
 function createDeleteTaskObject(uuid) {
     taskDelete = {
