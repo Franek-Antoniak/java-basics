@@ -33,7 +33,7 @@
                 <span id="task${task?index}">Description: ${task.description} </span>
             </label>
             <div style="display:flex; justify-content: center;">
-                <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#exampleModalCenter"  onclick="createDeleteTaskObject('uuid${task?index}')">Delete</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"  onclick="createDeleteTaskObject('uuid${task?index}')">Delete</button>
             </div>
           </li>
         </ul>
