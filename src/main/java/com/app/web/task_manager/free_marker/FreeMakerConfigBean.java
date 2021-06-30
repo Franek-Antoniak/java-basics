@@ -3,6 +3,7 @@ package com.app.web.task_manager.free_marker;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateExceptionHandler;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.ClassPathResource;
 
 import java.io.File;
 import java.io.IOException;

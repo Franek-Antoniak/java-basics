@@ -2,7 +2,6 @@ package com.app.web.task_manager.task;
 
 import com.app.web.task_manager.task.model.TaskCreate;
 import com.app.web.task_manager.task.model.TaskDelete;
-import com.app.web.task_manager.task.model.TaskRead;
 import com.app.web.task_manager.task.model.TaskUpdate;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -45,11 +44,5 @@ public class TaskService {
 
     public List<Task> getLatestTasks() {
         return taskRepository.findAll();
-    }
-
-    public Task getTaskByUUID(TaskRead taskRead) {
-        UUID uuid = taskRead.getUniqueId();
-
-        return taskRepository.findByUniqueId(uuid).orElseThrow(TaskNotFoundException::new);
     }
 }
